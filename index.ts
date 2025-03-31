@@ -1,6 +1,11 @@
 import express ,{ Request, response, Response }from 'express'
 const app = express();
 const PORT = 3000;
+app.get('/',(req:Request,res:Response)=>{
+    res.json({
+        'msessage':'Hello World'
+    })
+})
 app.get('/:n',(req:Request,res:Response)=>{
     let sum = 0;
     let param = parseFloat(req.params.n);
